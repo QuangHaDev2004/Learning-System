@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import { Sidebar } from "../components/sidebar/Sidebar";
 
 export const metadata: Metadata = {
-  title: "QuangHaDev",
+  title: "Hệ thống học tập online",
   description: "Nền tảng học lập trình trực tuyến số 1 Việt Nam",
 };
 
-export default function RootLayout({
+export default function DashboardLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;

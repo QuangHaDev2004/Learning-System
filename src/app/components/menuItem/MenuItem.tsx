@@ -19,7 +19,7 @@ export const MenuItem = (
       <Link
         href={url}
         className={
-          `p-3 rounded-[6px] flex items-center gap-3 transition-all 
+          `font-[500] p-3 rounded-[6px] flex items-center gap-3 transition-all 
             ${isActive
             ? "text-white bg-primary"
             : "hover:text-primary hover:bg-primary/10"
