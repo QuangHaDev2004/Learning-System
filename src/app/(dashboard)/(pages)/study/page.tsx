@@ -1,3 +1,5 @@
+import { CourseItem } from "@/app/components/course/CourseItem";
+import { Title } from "@/app/components/title/Title";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -8,7 +10,15 @@ export const metadata: Metadata = {
 export default function StudyPage() {
   return (
     <>
-      <h1>Study</h1>
+      <Title title="Khu vực học tập" />
+
+      {/* List Course */}
+      <div className="grid grid-cols-3 gap-[20px] mt-8">
+        {/* Item */}
+        <CourseItem />
+        <CourseItem />
+        <CourseItem />
+      </div>
     </>
   )
 }
