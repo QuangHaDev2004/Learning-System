@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { MenuItem } from "../menuItem/MenuItem"
-import { menuItems } from "@/app/contants/contants"
+import { menuItems } from "@/config/menu"
 
 export const Sidebar = () => {
   return (

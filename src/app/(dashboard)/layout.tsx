@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
-import "./globals.css";
-import { ClerkProvider } from "@clerk/nextjs";
-
+import { Sidebar } from "../components/sidebar/Sidebar";
 
 export const metadata: Metadata = {
   title: "QuangHaDev",
@@ -14,12 +12,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider>
-      <html lang="en">
-        <body>
-          {children}
-        </body>
-      </html>
-    </ClerkProvider>
+
+    <div className="grid grid-cols-[300px_minmax(0,_1fr)]">
+      {/* Sidebar */}
+      <Sidebar />
+
+      <main>{children}</main>
+    </div>
   );
 }
