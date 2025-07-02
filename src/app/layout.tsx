@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { Sidebar } from "./components/sidebar/Sidebar";
 
 
 export const metadata: Metadata = {
-  title: "Learning System",
+  title: "QuangHaDev",
   description: "Nền tảng học lập trình trực tuyến số 1 Việt Nam",
 };
 
@@ -15,7 +16,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        {children}
+        <div className="grid grid-cols-[300px_minmax(0,_1fr)]">
+          {/* Sidebar */}
+          <Sidebar /> 
+
+          <main>{children}</main>
+        </div>
       </body>
     </html>
   );
