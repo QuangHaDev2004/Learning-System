@@ -17,7 +17,7 @@ export default function DashboardLayout({
       {/* Sidebar */}
       <Sidebar />
 
-      <main>{children}</main>
+      <main className="p-5">{children}</main>
     </div>
   );
 }

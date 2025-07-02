@@ -5,7 +5,7 @@ import { menuItems } from "@/config/menu"
 export const Sidebar = () => {
   return (
     <>
-      <aside className="p-5 border-r border-r-gray-200 h-screen">
+      <aside className="bg-white p-5 border-r border-r-gray-200 h-screen">
         {/* Logo */}
         <Link href="/" className="font-bold text-3xl block mb-[20px]">
           <span className="text-primary">QuangHa</span>

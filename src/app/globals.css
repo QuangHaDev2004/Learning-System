@@ -2,9 +2,10 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #F38181;
+  --color-primary: #001C66;
 }
 
 body {
   font-family: "Be Vietnam Pro", sans-serif;
+  background-color: rgba(128, 128, 128, 0.1);
 }
