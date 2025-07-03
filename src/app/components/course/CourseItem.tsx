@@ -5,7 +5,7 @@ import { FaRegEye, FaRegStar } from "react-icons/fa6"
 export const CourseItem = () => {
   return (
     <>
-      <div className="bg-white border border-gray-200 p-[16px] rounded-[8px]">
+      <div className="bg-white dark:bg-darker border border-gray-200 dark:border-gray-200/10 p-[16px] rounded-[8px]">
         <Link
           href="#"
           className="block h-[200px] relative"
