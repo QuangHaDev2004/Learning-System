@@ -1,10 +1,14 @@
+"use client"
 import Link from "next/link"
 import { MenuItem } from "../menuItem/MenuItem"
 import { menuItems } from "@/config/menu"
-import { UserButton } from "@clerk/nextjs"
+import { useAuth, UserButton } from "@clerk/nextjs"
 import { ModeToggle } from "../darkmode/ModeToggle"
+import { HiOutlineUsers } from "react-icons/hi2"
 
 export const Sidebar = () => {
+  const { userId } = useAuth();
+
   return (
     <>
       <aside className="bg-white dark:bg-darker p-5 border-r border-r-gray-200 dark:border-r-gray-200/10 h-screen flex flex-col">
@@ -32,7 +36,13 @@ export const Sidebar = () => {
         {/* User Button */}
         <div className="mt-auto flex items-center justify-end gap-5">
           <ModeToggle />
-          <UserButton />
+          {!userId ? (
+            <Link href="/sign-in" className="size-10 rounded-lg bg-primary text-white flex items-center justify-center p-1">
+              <HiOutlineUsers />
+            </Link>
+          ) : (
+            <UserButton />
+          )}
         </div>
       </aside>
     </>
