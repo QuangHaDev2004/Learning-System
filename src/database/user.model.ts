@@ -7,10 +7,10 @@ export interface IUser extends Document {
   username: string;
   email: string;
   avatar: string;
-  course: Schema.Types.ObjectId;
+  courses: Schema.Types.ObjectId;
   status: EUserStatus;
   role: EUserRole;
-  createAt: Date;
+  created_at: Date;
 }
 
 const userSchema = new Schema<IUser>({
@@ -22,18 +22,22 @@ const userSchema = new Schema<IUser>({
   },
   username: {
     type: String,
+    unique: true,
+    required: true,
   },
   email: {
     type: String,
+    unique: true,
+    required: true,
   },
   avatar: {
     type: String,
   },
-  course: {
+  courses: {
     type: Schema.Types.ObjectId,
     ref: "Course",
   },
-  createAt: {
+  created_at: {
     type: Date,
     default: Date.now,
   },
